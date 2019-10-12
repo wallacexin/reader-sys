@@ -34,7 +34,7 @@ public class ReadingListServiceTest {
         Book book = new Book();
         book.setId(new Long(1));
         book.setReader("wallace");
-        book.setAuthor("wallace");
+        book.setAuthor("timmy");
         book.setDescription("nice");
         book.setIsbn("1234");
         book.setTitle("book");
@@ -42,7 +42,7 @@ public class ReadingListServiceTest {
         books.add(book);
         Mockito.when(readingListService.findByReader(Mockito.anyString())).thenReturn(books);
         List<Book> rsBooks = readingListService.findByReader("wallace");
-        Assert.assertEquals("wallace",rsBooks.get(0).getAuthor());
+        Assert.assertEquals("timmy",rsBooks.get(0).getAuthor());
 
   }
 
